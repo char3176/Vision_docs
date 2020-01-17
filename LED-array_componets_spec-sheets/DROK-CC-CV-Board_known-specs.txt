@@ -1,0 +1,49 @@
+DROK CC CV Power Supply Step Down Module
+
+Parameters:
+Input voltage range: DC 4V - 38V
+Output voltage range: DC 1.25V - 36V continuously adjustable
+Output current range: 0 - 5A max, adjustable
+Output power: 75W max
+Working Temperature: -40℃~+85℃
+Working Frequency: 180KHz
+Conversion Efficiency: 96% max
+Installation: 4x 3mm screw
+Wiring method: wiring terminal or soldering terminals; V-IN is input, V-OUT is output.
+Dimension: 62*27*20mm/2.44*1.06*0.78inch
+
+Protection:
+Short-circuit protection: Yes (Limited current 8A)
+Over-temperature protection: Yes (output auto shutdown if over temp)
+Input reverse connection protection: No (please add large-current diode in series at input if needed)
+
+Application:
+As normal buck voltage converter module with over-current protection;
+As charger for Lithium battery, nickel-cadmium nickel-hydrogen battery (battery pack) with various battery values, for solar battery panels, wind turbine;
+As high power LED CC drive module.
+
+LED Indicator light:
+Red light: CC/CC mode indicator. ON in CC mode, OFF in CV mode.
+Blue light: charging indicator. On when charging.
+Green light: Full-charged indicator. On when full-charged.
+
+******
+NOTE: POLARITY OF INPUTS & OUTPUTS MAY BE FLIPPED. 
+DETAILS: The polarity (+ & -) of the "IN" and "OUT" ports seems like they may be flipped. (This assertion needs to be double-checked and verified.)  ie --> one end of the board has two inputs, one labeled "IN -" and one labeled "IN +".  The other end of the board has two outputs, one labeled "OUT -" and "OUT +".  If the polarity between the two sides does indeed flip, that means "IN-" goes to "OUT +" and "IN +" goes to "OUT -".  Again, this needs to be double-checked.  In the meantime, verify with a multimeter that BOTH the amps & voltage going into the "IN" side of the board match what you expect.  Then do the same for the "OUT" side of the board.   
+
+NOTE 2: HOW TO SET/USE BOARD
+DETAILS:  Before using the board in a circuit, attach leads of a multimeter to "OUT -" and "OUT +" sockets measure/monitor the output voltage and amperage. "Power-on" the board. Using the multimeter to read the output voltage and/or the amps, adjust output voltage and amperage by turning regulator screws.  To find the regulator screws, orient the board With "IN" sockets on your left and "OUT" sockets on your right. The left-most regulator (labeled "CV" along top of board) controls voltage. The right-most regulator (labeled "CC" along top of board) controls current, and is located above the toroid on the board. Turn the screws clockwise to increase the voltage/amp output by the board; counter-clockwise to decrease them.
+
+NOTE 3: ON-BOARD LEDS & THEIR MEANINGS
+  - Red light:  On when in constant current state, Off when in constant voltage state
+  - Blue light:  On when charging, Off when not charging
+  - Green light:  On when fully charged, Off when not fully charged
+
+NOTE 4: SOME ADVICE 
+   - As a general rule-of-thumb, try not to load the board with more than 70-80% of it's allowed max voltage, wattage or amps.  This will help preserve the expected lifetime of the board.  ie, running at 100% of the max allowed voltage, wattage or amps, for extended periods of time will eventually burn-out the board.
+
+NOTE 5: BE CAREFUL
+   - Be careful when touching the board while it's powered-on.  Accidently "shorting" any live connectors on the board (ie bridging two of them with the skin of your fingertip) could be significantly ... unpleasant ... and potentially dangerous. 
+ 
+
+
