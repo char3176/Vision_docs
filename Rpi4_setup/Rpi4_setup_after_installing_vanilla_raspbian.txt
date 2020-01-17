@@ -1,3 +1,6 @@
+# NOT FINSHED YET.  STILL COMPOSING.
+
+
 sudo raspi-config
   Under "Advanced Options" > "Expand Filesystem"
 sudo reboot
