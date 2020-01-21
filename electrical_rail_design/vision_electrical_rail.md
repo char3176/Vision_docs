@@ -32,3 +32,11 @@
     # 3 LED - in-parallel
       - Voltage = 3.5V
       - Current = 1.050A
+
+
+# Buck Converter  CC CV
+  Input = DC 4V-38V
+  Output = 1.25V -36V
+           up to 5A max
+           up to 75W max
+
