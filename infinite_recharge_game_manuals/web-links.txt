@@ -1,0 +1,10 @@
+# This file contains useful web links to materials provided by FIRST
+# about the rules and specs of the 2020 INFINITE RECHARGE game
+
+# Game & Season materials
+https://www.firstinspires.org/resource-library/frc/competition-manual-qa-system
+
+# WPIlib Documentation
+https://docs.wpilib.org/en/latest/
+
+
