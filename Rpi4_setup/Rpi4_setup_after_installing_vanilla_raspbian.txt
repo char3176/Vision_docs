@@ -2,7 +2,10 @@
 
 
 sudo raspi-config
-  Under "Advanced Options" > "Expand Filesystem"
+  - Under "Advanced Options" > "Expand Filesystem"
+  - Activate SSH
+  - Activate camera
+  - set your language, timezone, keyboard under "Localization options"
 sudo reboot
 
 sudo apt purge wolfram-engine libreoffice*
@@ -22,6 +25,9 @@ sudo apt install -y libcanberra-gtk*
 sudo apt install -y libatlas-base-dev gfortran
 sudo apt install -y python3-dev 
 sudo apt install -y git
+
+sudo apt install -y gimp
+sudo apt install -y vim-nox
 
 export TDATE=`date "+%Y.%m.%d.%H%M%S"`
 
@@ -95,21 +101,35 @@ sudo nano /etc/dphys-swapfile
 
 # save file
 
-cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
-ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so cv2.so
+sudo /etc/init.d/dphys-swapfile stop
+sudo /etc/init.d/dphys-swapfile start
+
+sudo apt install -y mlocate
+sudo updatedb
+export cv2location=`locate cv2.cypthon | grep "usr/local"`
+export cv2libdir=`dirname $[cv2location]`
+sudo ln -s $cv2location $cv2libdir/cv2.so
+
 cd ${HOME}
 
 #Add next line to bottom of ${HOME}/.bashrc
- --- need to get this from /home/pi/.bashrc on Rpi4 of Team3176 and paste it here
+echo "export LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0" >> ~/.bashrc
 
 
-sudo pip install opencv-python opencv-utils opencv-contrib-python
-sudo pip install matplotlib
-sudo pip install picamera
-sudo pip install ipython
-sudo pip install imutils
-sudo pip install argparse
+#sudo pip install opencv-python opencv-utils opencv-contrib-python
+sudo pip3 install matplotlib
+sudo pip3 install picamera
+sudo pip3 install ipython
+sudo pip3 install imutils
+sudo pip3 install argparse
+sudo pip3 install pynetworktables
 
 
+# install nedit
+sudo apt install -y nedit
+
+#install vscode (as code-oss)
+wget https://packagecloud.io/headmelted/codebuilds/gpgkey -O - | sudo apt-key add -
+curl -L https://raw.githubusercontent.com/headmelted/codebuilds/master/docs/installers/apt.sh | sudo bash
 
 
